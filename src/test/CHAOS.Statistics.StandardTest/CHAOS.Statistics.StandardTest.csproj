@@ -31,27 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Accessibility">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+    <Reference Include="nunit.framework, Version=2.4.3.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\tools\nunit\nunit.framework.dll</HintPath>
+      <HintPath>..\..\..\tools\NUnit-2.6.0.12051\bin\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Portal">
       <HintPath>..\..\..\lib\Portal.dll</HintPath>
     </Reference>
-    <Reference Include="PortalTest">
-      <HintPath>..\..\..\lib\PortalTest.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,7 +56,7 @@
       <Name>CHAOS.Statistics.Data.DTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\app\CHAOS.Statistics.Data.EF\CHAOS.Statistics.Data.EF.csproj">
-      <Project>{B354CA50-ADD0-47A0-B3F3-CA95C293E5F3}</Project>
+      <Project>{b354ca50-add0-47a0-b3f3-ca95c293e5f3}</Project>
       <Name>CHAOS.Statistics.Data.EF</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\app\CHAOS.Statistics.Module.Standard\CHAOS.Statistics.Module.Standard.csproj">

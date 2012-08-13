@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 using CHAOS.Statistics.Module.Standard;
-using CHAOS.Statistics.Data.EF;
-using System.Data.Objects;
 using System.Diagnostics; 
 
 namespace CHAOS.Statistics.StandardTest

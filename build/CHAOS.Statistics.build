@@ -1,0 +1,36 @@
+﻿<project name="CHAOS.Statistics" default="all">
+  
+  <property name="nantcontrib_path" value="..\tools\nantcontrib-0.92"/>
+  <property name="nant_path" value="..\tools\nant-0.92"/>
+  <property name="project_path" value="..\"/>
+  <property name="solutionfile" value="CHAOS.Statistics.sln"/>
+  
+  <target name="all">
+    <loadtasks assembly="${path::combine(nantcontrib_path, 'bin\NAnt.Contrib.Tasks.dll')}" />
+    <loadtasks assembly="${path::combine(nant_path, 'bin\Fyhr.NAnt.ILMerge.dll')}" />
+    
+    <msbuild project="${path::combine(project_path,solutionfile)}">
+      <arg value="/property:Configuration=release" />
+      <arg value="/t:Rebuild" />
+    </msbuild>
+
+	<ilmerge outputfile="CHAOS.Statistics.dll"
+             targetkind="dll"
+             logfile="Statistics-ilmerge.log"
+			 targetplatform="v4"
+			 targetplatformdirectory="C:\Windows\Microsoft.NET\Framework\v4.0.30319">
+      <inputassemblies>
+		<include name="..\src\app\CHAOS.Statistics.Data.DTO\bin\Release\CHAOS.Statistics.Data.DTO.dll" />
+        <include name="..\src\app\CHAOS.Statistics.Data.EF\bin\Release\CHAOS.Statistics.Data.EF.dll" />
+		<include name="..\src\app\CHAOS.Statistics.Module.Standard\bin\Release\CHAOS.Statistics.Module.Standard.dll" />
+      </inputassemblies>
+
+      <librarypath>
+        <include name="..\lib\*.dll" />
+      </librarypath>
+      
+    </ilmerge>
+    
+  </target>
+  
+</project>
